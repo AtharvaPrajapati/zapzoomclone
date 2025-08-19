@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,6 +11,16 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* ZapZoom Color Variables */
+  --primary-color: rgb(22, 66, 60);
+  --primary-hover: rgb(18, 52, 48);
+  --secondary-color: rgb(255, 102, 150);
+  --text-color: rgb(56, 56, 56);
+  --title-color: rgb(12, 12, 12);
+  --border-color: rgba(129, 129, 129, 0.2);
+  --background-light: #f8f9fa;
+  --header-bg: rgb(0, 0, 0);
 }
 
 * {
@@ -39,12 +49,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #9333ea, #ec4899);
+  background: var(--primary-color);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #7c3aed, #db2777);
+  background: var(--primary-hover);
 }
 
 /* Smooth scrolling */

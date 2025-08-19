@@ -1,77 +1,143 @@
-import { useState } from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Features from './components/Features'
-import ProductGrid from './components/ProductGrid'
-import About from './components/About'
-import Testimonials from './components/Testimonials'
-import Footer from './components/Footer'
+import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { AuthProvider } from './contexts/AuthContext'
+import Layout from './components/Layout'
+import DashboardLayout from './components/DashboardLayout'
+import ProtectedRoute from './components/ProtectedRoute'
+import Home from './pages/Home'
+import Shop from './pages/Shop'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Cart from './pages/Cart'
+import Login from './pages/Login'
+import Register from './pages/Register'
+import Dashboard from './pages/Dashboard'
+import Orders from './pages/Orders'
+import AccountSettings from './pages/AccountSettings'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsConditions from './pages/TermsConditions'
 import ResponsiveTest from './components/ResponsiveTest'
+import { getCart, addToCart as addToCartLS, removeFromCart as removeFromCartLS, updateCartQuantity as updateCartQuantityLS, getTotalPrice, initializeDemoData } from './utils/localStorage'
 import './App.css'
 
 function App() {
   const [cartItems, setCartItems] = useState([])
   const [isCartOpen, setIsCartOpen] = useState(false)
 
+  // Initialize cart from localStorage on mount
+  useEffect(() => {
+    initializeDemoData()
+    setCartItems(getCart())
+  }, [])
+
   const addToCart = (product) => {
-    setCartItems(prev => {
-      const existingItem = prev.find(item => item.id === product.id)
-      if (existingItem) {
-        return prev.map(item =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        )
-      }
-      return [...prev, { ...product, quantity: 1 }]
-    })
+    const updatedCart = addToCartLS(product)
+    setCartItems(updatedCart)
   }
 
   const removeFromCart = (productId) => {
-    setCartItems(prev => prev.filter(item => item.id !== productId))
+    const updatedCart = removeFromCartLS(productId)
+    setCartItems(updatedCart)
   }
 
   const updateQuantity = (productId, quantity) => {
-    if (quantity <= 0) {
-      removeFromCart(productId)
-      return
-    }
-    setCartItems(prev =>
-      prev.map(item =>
-        item.id === productId ? { ...item, quantity } : item
-      )
-    )
+    const updatedCart = updateCartQuantityLS(productId, quantity)
+    setCartItems(updatedCart)
   }
 
   const getTotalItems = () => {
     return cartItems.reduce((total, item) => total + item.quantity, 0)
   }
 
-  const getTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0)
+  const getTotalPriceFunc = () => {
+    return getTotalPrice(cartItems)
+  }
+
+  const refreshCart = () => {
+    setCartItems(getCart())
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
-      <Header
-        cartItems={cartItems}
-        totalItems={getTotalItems()}
-        isCartOpen={isCartOpen}
-        setIsCartOpen={setIsCartOpen}
-        removeFromCart={removeFromCart}
-        updateQuantity={updateQuantity}
-        getTotalPrice={getTotalPrice}
-      />
-      <Hero />
-      <Features />
-      <ProductGrid addToCart={addToCart} />
-      <About />
-      <Testimonials />
-      <Footer />
+    <AuthProvider>
+      <Router>
+        <Routes>
+        <Route
+          path="/"
+          element={
+            <Layout
+              cartItems={cartItems}
+              totalItems={getTotalItems()}
+              isCartOpen={isCartOpen}
+              setIsCartOpen={setIsCartOpen}
+              removeFromCart={removeFromCart}
+              updateQuantity={updateQuantity}
+              getTotalPrice={getTotalPrice}
+            />
+          }
+        >
+          <Route
+            index
+            element={
+              <Home
+                cartItems={cartItems}
+                addToCart={addToCart}
+                removeFromCart={removeFromCart}
+                updateQuantity={updateQuantity}
+                getTotalPrice={getTotalPrice}
+              />
+            }
+          />
+          <Route
+            path="shop"
+            element={<Shop addToCart={addToCart} />}
+          />
+          
+          
+          <Route
+            path="about"
+            element={<About />}
+          />
+          <Route
+            path="contact"
+            element={<Contact />}
+          />
+          <Route
+            path="cart"
+            element={
+              <Cart
+                cartItems={cartItems}
+                removeFromCart={removeFromCart}
+                updateQuantity={updateQuantity}
+                getTotalPrice={getTotalPriceFunc}
+                refreshCart={refreshCart}
+              />
+            }
+          />
+        </Route>
 
-      {/* Responsive Test Component - Remove in production */}
-      {process.env.NODE_ENV === 'development' && <ResponsiveTest />}
-    </div>
+        {/* Authentication Routes */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/cart" element={<Cart />} />
+
+        {/* Legal Pages */}
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
+
+        {/* Dashboard Routes - Protected */}
+        <Route path="/dashboard" element={
+            <DashboardLayout />
+        }>
+          <Route index element={<Dashboard />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="settings" element={<AccountSettings />} />
+        </Route>
+        </Routes>
+
+        {/* Responsive Test Component - Remove in production */}
+        {process.env.NODE_ENV === 'development' && <ResponsiveTest />}
+      </Router>
+    </AuthProvider>
   )
 }
 

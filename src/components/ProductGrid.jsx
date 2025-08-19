@@ -159,7 +159,7 @@ const ProductGrid = ({ addToCart }) => {
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-            Our <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Collection</span>
+            Featured <span className="text-primary-500">Products</span>
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4 sm:px-0">
             Discover our handpicked selection of elegant ethnic wear designed for the modern woman
@@ -174,7 +174,7 @@ const ProductGrid = ({ addToCart }) => {
               onClick={() => setSelectedCategory(category.id)}
               className={`px-3 sm:px-4 lg:px-6 py-2 rounded-full font-medium transition-all duration-300 text-sm sm:text-base touch-manipulation ${
                 selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                  ? 'bg-primary-500 text-white shadow-lg'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >

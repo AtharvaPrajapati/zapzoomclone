@@ -1,16 +1,47 @@
 import { useState } from 'react'
-import { Heart, ShoppingCart, Eye, Star } from 'lucide-react'
+import { Heart, ShoppingCart, Eye, Star, CreditCard } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext'
 import { useResponsive } from '../hooks/useResponsive'
+import RazorpayPayment from './RazorpayPayment'
+import LoginModal from './LoginModal'
+import PaymentSuccessModal from './PaymentSuccessModal'
 
-const ProductCard = ({ 
-  product, 
-  addToCart, 
-  toggleWishlist, 
-  openQuickView, 
-  isWishlisted 
+const ProductCard = ({
+  product,
+  addToCart,
+  toggleWishlist,
+  openQuickView,
+  isWishlisted
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false)
+  const [showPayment, setShowPayment] = useState(false)
+  const [showLoginModal, setShowLoginModal] = useState(false)
+  const [showSuccessModal, setShowSuccessModal] = useState(false)
+  const [orderDetails, setOrderDetails] = useState(null)
   const { isMobile, isTablet } = useResponsive()
+  const { isAuthenticated } = useAuth()
+  const navigate = useNavigate()
+
+  const handlePaymentSuccess = (cartItem, order) => {
+    addToCart(cartItem)
+    setShowPayment(false)
+    setOrderDetails(order)
+    setShowSuccessModal(true)
+  }
+
+  const handleBuyNow = () => {
+    if (!isAuthenticated) {
+      setShowLoginModal(true)
+      return
+    }
+    setShowPayment(true)
+  }
+
+  const handleLoginSuccess = () => {
+    setShowLoginModal(false)
+    setShowPayment(true)
+  }
 
   const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -113,9 +144,9 @@ const ProductCard = ({
             >
               <Heart className="h-3 w-3 sm:h-4 sm:w-4" />
             </button>
-            <button 
+            <button
               onClick={handleQuickView}
-              className="p-1.5 sm:p-2 bg-white text-gray-600 hover:text-purple-600 rounded-full shadow-lg transition-all duration-300"
+              className="p-1.5 sm:p-2 bg-white text-gray-600 hover:text-primary-600 rounded-full shadow-lg transition-all duration-300"
               aria-label="Quick view"
             >
               <Eye className="h-3 w-3 sm:h-4 sm:w-4" />
@@ -123,30 +154,38 @@ const ProductCard = ({
           </div>
         )}
 
-        {/* Mobile Add to Cart - Always Visible */}
+        {/* Mobile Action Buttons - Always Visible */}
         {isMobile && (
-          <div className="absolute bottom-2 left-2 right-2">
+          <div className="absolute bottom-2 left-2 right-2 flex gap-2">
             <button
               onClick={handleAddToCart}
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center gap-1 text-xs"
+              className="flex-1 bg-gray-600 text-white py-2 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-300 flex items-center justify-center gap-1 text-xs"
             >
               <ShoppingCart className="h-3 w-3" />
               Add
             </button>
+            <button
+              onClick={handleBuyNow}
+              className="flex-1 bg-primary-500 text-white py-2 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 flex items-center justify-center gap-1 text-xs"
+            >
+              <CreditCard className="h-3 w-3" />
+              Buy
+            </button>
           </div>
         )}
 
-        {/* Desktop Add to Cart - Hover to Show */}
+        {/* Desktop Action Buttons - Hover to Show */}
         {!isMobile && (
-          <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 right-2 sm:right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 right-2 sm:right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex gap-2">
             <button
               onClick={handleAddToCart}
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-1.5 sm:py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm"
+              className="flex-1 bg-gray-600 text-white py-1.5 sm:py-2 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-300 flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm"
             >
               <ShoppingCart className="h-3 w-3 sm:h-4 sm:w-4" />
               <span className="hidden sm:inline">Add to Cart</span>
               <span className="sm:hidden">Add</span>
             </button>
+            
           </div>
         )}
       </div>
@@ -167,7 +206,7 @@ const ProductCard = ({
 
         {/* Price */}
         <div className="flex items-center gap-1 sm:gap-2 flex-wrap">
-          <span className="text-base sm:text-lg font-bold text-purple-600">
+          <span className="text-base sm:text-lg font-bold text-primary-600">
             ₹{product.price}
           </span>
           {product.originalPrice > product.price && (
@@ -182,20 +221,43 @@ const ProductCard = ({
           <div className="flex gap-2 mt-3">
             <button
               onClick={handleAddToCart}
-              className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg font-medium text-xs flex items-center justify-center gap-1"
+              className="flex-1 bg-primary-500 text-white py-2 rounded-lg font-medium text-xs flex items-center justify-center gap-1"
             >
               <ShoppingCart className="h-3 w-3" />
               Add to Cart
             </button>
             <button
               onClick={handleQuickView}
-              className="px-3 py-2 border border-purple-600 text-purple-600 rounded-lg font-medium text-xs hover:bg-purple-50"
+              className="px-3 py-2 border border-primary-600 text-primary-600 rounded-lg font-medium text-xs hover:bg-primary-50"
             >
               View
             </button>
           </div>
         )}
       </div>
+
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+        onSuccess={handleLoginSuccess}
+      />
+
+      {/* Payment Modal */}
+      {showPayment && (
+        <RazorpayPayment
+          product={product}
+          onSuccess={handlePaymentSuccess}
+          onClose={() => setShowPayment(false)}
+        />
+      )}
+
+      {/* Success Modal */}
+      <PaymentSuccessModal
+        isOpen={showSuccessModal}
+        onClose={() => setShowSuccessModal(false)}
+        orderDetails={orderDetails}
+      />
     </div>
   )
 }

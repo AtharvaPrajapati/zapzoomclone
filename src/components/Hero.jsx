@@ -12,30 +12,33 @@ const Hero = () => {
   const slides = [
     {
       id: 1,
-      title: "Elegant Ethnic Wear",
-      subtitle: "Discover Our Premium Collection",
-      description: "Luxurious Sarees & Kurtis for the Modern Woman",
+      title: "Premium Ethnic Collection",
+      subtitle: "Discover Timeless Elegance",
+      description: "Handcrafted Sarees & Kurtis for Every Occasion",
       image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      buttonText: "Shop Now",
-      buttonLink: "#shop"
+      buttonText: "Shop Collection",
+      buttonLink: "#shop",
+      offer: "Up to 50% Off"
     },
     {
       id: 2,
-      title: "Festive Collection 2024",
-      subtitle: "Limited Edition Designs",
-      description: "Unmatched Craftsmanship, Unbeatable Style",
+      title: "Festive Special",
+      subtitle: "Celebrate in Style",
+      description: "Exclusive Designs for Festival Season",
       image: "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      buttonText: "Explore Collection",
-      buttonLink: "#collection"
+      buttonText: "Explore Now",
+      buttonLink: "#collection",
+      offer: "New Arrivals"
     },
     {
       id: 3,
-      title: "Bridal Elegance",
-      subtitle: "Your Special Day Deserves Special Attire",
-      description: "Elevate Your Wardrobe with Timeless Elegance",
+      title: "Bridal Collection",
+      subtitle: "Your Dream Wedding Look",
+      description: "Exquisite Bridal Wear for Your Special Day",
       image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       buttonText: "View Bridal",
-      buttonLink: "#bridal"
+      buttonLink: "#bridal",
+      offer: "Limited Edition"
     }
   ]
 
@@ -113,7 +116,12 @@ const Hero = () => {
             <div className="relative h-full flex items-center">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className="max-w-full sm:max-w-2xl text-center sm:text-left">
-                  <h2 className="text-xs sm:text-sm md:text-base font-semibold text-purple-300 mb-2 tracking-wide uppercase">
+                  {slide.offer && (
+                    <div className="inline-block bg-secondary-500 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+                      {slide.offer}
+                    </div>
+                  )}
+                  <h2 className="text-xs sm:text-sm md:text-base font-semibold text-primary-300 mb-2 tracking-wide uppercase">
                     {slide.subtitle}
                   </h2>
                   <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 leading-tight">
@@ -125,13 +133,13 @@ const Hero = () => {
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-4 sm:px-0">
                     <a
                       href={slide.buttonLink}
-                      className="inline-flex items-center justify-center px-6 sm:px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg touch-manipulation text-sm sm:text-base"
+                      className="inline-flex items-center justify-center px-6 sm:px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg touch-manipulation text-sm sm:text-base"
                     >
                       {slide.buttonText}
                     </a>
                     <a
                       href="#about"
-                      className="inline-flex items-center justify-center px-6 sm:px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 touch-manipulation text-sm sm:text-base"
+                      className="inline-flex items-center justify-center px-6 sm:px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary-500 transition-all duration-300 touch-manipulation text-sm sm:text-base"
                     >
                       Learn More
                     </a>

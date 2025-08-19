@@ -30,7 +30,7 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-            About <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">ZapZoom</span>
+            About <span className="text-primary-500">ZapZoom</span>
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
             Welcome to ZapZoom Technologies Private Limited, your premier destination for elegant and stylish women's ethnic fashion.

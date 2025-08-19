@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { X, Home, ShoppingBag, User, Heart, Phone, Mail, MapPin } from 'lucide-react'
 
 const MobileMenu = ({ isOpen, onClose, cartItems, totalItems }) => {
@@ -17,12 +18,16 @@ const MobileMenu = ({ isOpen, onClose, cartItems, totalItems }) => {
   }, [isOpen])
 
   const menuItems = [
-    { name: 'Home', href: '#', icon: Home },
-    { name: 'Shop', href: '#shop', icon: ShoppingBag },
-    { name: 'Kurtis', href: '#kurtis', icon: ShoppingBag },
-    { name: 'Sarees', href: '#sarees', icon: ShoppingBag },
-    { name: 'About Us', href: '#about', icon: User },
-    { name: 'Contact', href: '#contact', icon: Phone }
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'Shop', href: '/shop', icon: ShoppingBag },
+    { name: 'About', href: '/about', icon: User },
+    { name: 'Contact', href: '/contact', icon: Phone },
+    { name: 'My Account', href: '/dashboard', icon: User }
+  ]
+
+  const authItems = [
+    { name: 'Login', href: '/login', icon: User },
+    { name: 'Sign Up', href: '/register', icon: User }
   ]
 
   const quickActions = [
@@ -97,19 +102,44 @@ const MobileMenu = ({ isOpen, onClose, cartItems, totalItems }) => {
                   {menuItems.map((item) => {
                     const IconComponent = item.icon
                     return (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         onClick={onClose}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-purple-50 transition-colors group"
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-primary-50 transition-colors group"
                       >
-                        <IconComponent className="h-5 w-5 text-gray-400 group-hover:text-purple-600" />
-                        <span className="font-medium text-gray-700 group-hover:text-purple-600">
+                        <IconComponent className="h-5 w-5 text-gray-400 group-hover:text-primary-600" />
+                        <span className="font-medium text-gray-700 group-hover:text-primary-600">
                           {item.name}
                         </span>
-                      </a>
+                      </Link>
                     )
                   })}
+                </div>
+
+                {/* Authentication */}
+                <div className="border-t pt-4">
+                  <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
+                    Account
+                  </h3>
+                  <div className="space-y-2">
+                    {authItems.map((item) => {
+                      const IconComponent = item.icon
+                      return (
+                        <Link
+                          key={item.name}
+                          to={item.href}
+                          onClick={onClose}
+                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-primary-50 transition-colors group"
+                        >
+                          <IconComponent className="h-5 w-5 text-gray-400 group-hover:text-primary-600" />
+                          <span className="font-medium text-gray-700 group-hover:text-primary-600">
+                            {item.name}
+                          </span>
+                        </Link>
+                      )
+                    })}
+                  </div>
                 </div>
 
                 {/* Quick Actions */}
