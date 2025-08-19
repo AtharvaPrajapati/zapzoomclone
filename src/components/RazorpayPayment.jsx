@@ -58,10 +58,32 @@ const RazorpayPayment = ({ product, onSuccess, onClose }) => {
       description: `Payment for ${product.name}`,
       image: 'https://your-logo-url.com/logo.png',
       order_id: orderResponse.order_id, // Use backend order_id
-      handler: function (response) {
-        setPaymentSuccess(true)
-        setIsProcessing(false)
-        // Save order
+      handler: async function (response) {
+        // 1. Verify payment on backend
+        try {
+          const verifyRes = await fetch('http://localhost:5000/verify-payment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_signature: response.razorpay_signature
+            })
+          });
+          const verifyData = await verifyRes.json();
+          if (!verifyData.success) {
+            setIsProcessing(false);
+            alert('Payment verification failed. Please contact support.');
+            return;
+          }
+        } catch (err) {
+          setIsProcessing(false);
+          alert('Payment verification error: ' + err.message);
+          return;
+        }
+        // 2. Save order and show success
+        setPaymentSuccess(true);
+        setIsProcessing(false);
         const orderData = {
           userId: user?.id || 'guest',
           items: [{ ...product, quantity: 1 }],
@@ -70,15 +92,15 @@ const RazorpayPayment = ({ product, onSuccess, onClose }) => {
           orderId: response.razorpay_order_id,
           signature: response.razorpay_signature,
           paymentMethod: 'razorpay'
-        }
-        const savedOrder = saveOrder(orderData)
+        };
+        const savedOrder = saveOrder(orderData);
         const cartItem = {
           ...product,
           quantity: 1,
           paymentId: response.razorpay_payment_id,
           orderId: savedOrder?.id
-        }
-        onSuccess(cartItem, savedOrder)
+        };
+        onSuccess(cartItem, savedOrder);
       },
       prefill: {
         name: user ? `${user.firstName} ${user.lastName}` : 'Guest User',
