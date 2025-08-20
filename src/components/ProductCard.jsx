@@ -154,15 +154,15 @@ const ProductCard = ({
 
         {/* Action Buttons - Responsive */}
         <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 right-2 sm:right-3 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex gap-2">
-          <button
-            onClick={handleAddToCart}
+            <button
+              onClick={handleAddToCart}
             className="flex-1 bg-primary-500 text-white py-2 sm:py-2.5 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm shadow-lg"
-          >
-            <ShoppingCart className="h-3 w-3 sm:h-4 sm:w-4" />
+            >
+              <ShoppingCart className="h-3 w-3 sm:h-4 sm:w-4" />
             <span className="hidden xs:inline sm:hidden lg:inline">Add to Cart</span>
             <span className="xs:hidden sm:inline lg:hidden">Add</span>
-          </button>
-        </div>
+            </button>
+          </div>
       </div>
 
       {/* Product Info */}

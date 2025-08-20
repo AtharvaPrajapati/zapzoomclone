@@ -51,9 +51,9 @@ const ProductDetail = ({ addToCart, toggleWishlist, isWishlisted }) => {
         'Breathable and skin-friendly'
       ],
       images: [
-        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
       ],
       sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
       colors: ['Purple', 'Blue', 'Green', 'Pink', 'Red'],
@@ -79,9 +79,9 @@ const ProductDetail = ({ addToCart, toggleWishlist, isWishlisted }) => {
         'Dry clean recommended'
       ],
       images: [
-        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
       ],
       sizes: ['Free Size'],
       colors: ['Maroon', 'Navy', 'Gold', 'Silver', 'Red'],
@@ -107,9 +107,9 @@ const ProductDetail = ({ addToCart, toggleWishlist, isWishlisted }) => {
         'Breathable and soft'
       ],
       images: [
-        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
       ],
       sizes: ['XS', 'S', 'M', 'L', 'XL'],
       colors: ['White', 'Black', 'Beige', 'Light Blue', 'Pink'],
@@ -135,9 +135,9 @@ const ProductDetail = ({ addToCart, toggleWishlist, isWishlisted }) => {
         'Machine washable'
       ],
       images: [
-        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+        'https://images.unsplash.com/photo-1506629905607-d405b7a30db9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
       ],
       sizes: ['Free Size'],
       colors: ['Pink', 'Blue', 'Green', 'Yellow', 'Purple'],
@@ -163,9 +163,9 @@ const ProductDetail = ({ addToCart, toggleWishlist, isWishlisted }) => {
         'Available in multiple sizes'
       ],
       images: [
-        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+        'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
       ],
       sizes: ['XS', 'S', 'M', 'L', 'XL'],
       colors: ['Gold', 'Silver', 'Red', 'Blue', 'Black'],
@@ -191,9 +191,9 @@ const ProductDetail = ({ addToCart, toggleWishlist, isWishlisted }) => {
         'Comfortable fit'
       ],
       images: [
-        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
       ],
       sizes: ['XS', 'S', 'M', 'L', 'XL'],
       colors: ['Red', 'Pink', 'Blue', 'Green', 'Purple'],
@@ -219,9 +219,9 @@ const ProductDetail = ({ addToCart, toggleWishlist, isWishlisted }) => {
         'Machine washable'
       ],
       images: [
-        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
       ],
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
       colors: ['White', 'Black', 'Navy', 'Grey', 'Beige'],
@@ -247,9 +247,9 @@ const ProductDetail = ({ addToCart, toggleWishlist, isWishlisted }) => {
         'Easy to wear'
       ],
       images: [
-        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+        'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
       ],
       sizes: ['S', 'M', 'L', 'XL'],
       colors: ['Blue', 'Pink', 'Green', 'Yellow', 'Purple'],
@@ -275,9 +275,9 @@ const ProductDetail = ({ addToCart, toggleWishlist, isWishlisted }) => {
         'Elegant Anarkali style'
       ],
       images: [
-        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+        'https://images.unsplash.com/photo-1506629905607-d405b7a30db9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
       ],
       sizes: ['XS', 'S', 'M', 'L', 'XL'],
       colors: ['Pink', 'Blue', 'Green', 'Purple', 'Red'],
@@ -303,14 +303,294 @@ const ProductDetail = ({ addToCart, toggleWishlist, isWishlisted }) => {
         'Comes with storage box'
       ],
       images: [
-        'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+        'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
       ],
       sizes: ['Free Size'],
       colors: ['Gold', 'Silver', 'Rose Gold', 'Antique'],
       inStock: true,
       category: 'Accessories',
+      brand: 'Groomy Solutions'
+    },
+    11: {
+      id: 11,
+      name: 'Printed Palazzo Pants',
+      price: 899,
+      originalPrice: 1299,
+      discount: 31,
+      rating: 4.3,
+      reviews: 178,
+      description: 'Stylish printed palazzo pants with comfortable elastic waistband. Perfect to pair with kurtis and tops for a complete ethnic look.',
+      features: [
+        'Comfortable elastic waistband',
+        'Beautiful print design',
+        'Flowy palazzo style',
+        'Perfect for pairing',
+        'Breathable fabric',
+        'Easy to wear'
+      ],
+      images: [
+        'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
+      ],
+      sizes: ['S', 'M', 'L', 'XL'],
+      colors: ['Blue', 'Pink', 'Green', 'Yellow', 'Purple'],
+      inStock: true,
+      category: 'Bottoms',
+      brand: 'Groomy Solutions'
+    },
+    12: {
+      id: 12,
+      name: 'Silk Anarkali Suit',
+      price: 2799,
+      originalPrice: 3999,
+      discount: 30,
+      rating: 4.6,
+      reviews: 87,
+      description: 'Elegant silk Anarkali suit with beautiful embroidery work. Perfect for weddings and festive occasions. Includes kurta, palazzo, and dupatta.',
+      features: [
+        'Premium silk fabric',
+        'Beautiful embroidery work',
+        'Complete 3-piece set',
+        'Perfect for festivals',
+        'Comfortable fit',
+        'Elegant Anarkali style'
+      ],
+      images: [
+        'https://images.unsplash.com/photo-1506629905607-d405b7a30db9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
+      ],
+      sizes: ['XS', 'S', 'M', 'L', 'XL'],
+      colors: ['Pink', 'Blue', 'Green', 'Purple', 'Red'],
+      inStock: true,
+      category: 'Suits',
+      brand: 'Groomy Solutions'
+    },
+    13: {
+      id: 13,
+      name: 'Designer Crop Top',
+      price: 599,
+      originalPrice: 899,
+      discount: 33,
+      rating: 4.2,
+      reviews: 134,
+      description: 'Trendy designer crop top with modern styling. Perfect for casual outings and can be paired with high-waisted bottoms.',
+      features: [
+        'Modern trendy design',
+        'Comfortable fit',
+        'Versatile styling',
+        'Quality fabric',
+        'Perfect for casual wear',
+        'Easy to maintain'
+      ],
+      images: [
+        'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
+      ],
+      sizes: ['XS', 'S', 'M', 'L', 'XL'],
+      colors: ['Black', 'White', 'Red', 'Blue', 'Pink'],
+      inStock: true,
+      category: 'Tops',
+      brand: 'Groomy Solutions'
+    },
+    14: {
+      id: 14,
+      name: 'Cotton Straight Pants',
+      price: 799,
+      originalPrice: 1199,
+      discount: 33,
+      rating: 4.4,
+      reviews: 156,
+      description: 'Comfortable cotton straight pants perfect for casual and office wear. Made with premium cotton fabric for all-day comfort.',
+      features: [
+        'Premium cotton fabric',
+        'Straight fit design',
+        'Comfortable for daily wear',
+        'Perfect for office wear',
+        'Easy to maintain',
+        'Available in multiple colors'
+      ],
+      images: [
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
+      ],
+      sizes: ['XS', 'S', 'M', 'L', 'XL'],
+      colors: ['Black', 'Navy', 'Grey', 'Beige', 'White'],
+      inStock: true,
+      category: 'Bottoms',
+      brand: 'Groomy Solutions'
+    },
+    15: {
+      id: 15,
+      name: 'Handwoven Cotton Saree',
+      price: 1899,
+      originalPrice: 2799,
+      discount: 32,
+      rating: 4.5,
+      reviews: 92,
+      description: 'Beautiful handwoven cotton saree with traditional patterns. Comfortable for daily wear and special occasions. Includes matching blouse piece.',
+      features: [
+        'Handwoven cotton fabric',
+        'Traditional patterns',
+        'Includes blouse piece',
+        'Comfortable for daily wear',
+        'Natural breathable fabric',
+        'Easy to maintain'
+      ],
+      images: [
+        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
+      ],
+      sizes: ['Free Size'],
+      colors: ['Blue', 'Green', 'Red', 'Yellow', 'Purple'],
+      inStock: true,
+      category: 'Sarees',
+      brand: 'Groomy Solutions'
+    },
+    16: {
+      id: 16,
+      name: 'Embroidered Dupatta',
+      price: 399,
+      originalPrice: 599,
+      discount: 33,
+      rating: 4.3,
+      reviews: 78,
+      description: 'Elegant embroidered dupatta with intricate threadwork. Perfect to complete your ethnic outfit. Lightweight and comfortable to wear.',
+      features: [
+        'Intricate embroidery work',
+        'Lightweight fabric',
+        'Perfect for ethnic outfits',
+        'Comfortable to wear',
+        'Beautiful border design',
+        'Easy to drape'
+      ],
+      images: [
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1506629905607-d405b7a30db9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
+      ],
+      sizes: ['Free Size'],
+      colors: ['Pink', 'Blue', 'Green', 'Yellow', 'White'],
+      inStock: true,
+      category: 'Dupatta',
+      brand: 'Groomy Solutions'
+    },
+    17: {
+      id: 17,
+      name: 'Ethnic Sharara Set',
+      price: 2299,
+      originalPrice: 3299,
+      discount: 30,
+      rating: 4.5,
+      reviews: 92,
+      description: 'Beautiful ethnic sharara set with intricate embroidery. Perfect for weddings and festive occasions. Includes kurta, sharara, and dupatta.',
+      features: [
+        'Intricate embroidery work',
+        'Complete 3-piece set',
+        'Perfect for weddings',
+        'Comfortable fit',
+        'Premium fabric quality',
+        'Traditional design'
+      ],
+      images: [
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
+      ],
+      sizes: ['XS', 'S', 'M', 'L', 'XL'],
+      colors: ['Pink', 'Blue', 'Green', 'Red', 'Purple'],
+      inStock: true,
+      category: 'Suits',
+      brand: 'Groomy Solutions'
+    },
+    18: {
+      id: 18,
+      name: 'Printed Maxi Dress',
+      price: 1199,
+      originalPrice: 1799,
+      discount: 33,
+      rating: 4.2,
+      reviews: 134,
+      description: 'Stylish printed maxi dress perfect for casual outings and summer wear. Comfortable and trendy design with beautiful prints.',
+      features: [
+        'Beautiful print design',
+        'Maxi length style',
+        'Comfortable for summer',
+        'Trendy and stylish',
+        'Easy to wear',
+        'Perfect for casual outings'
+      ],
+      images: [
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
+      ],
+      sizes: ['XS', 'S', 'M', 'L', 'XL'],
+      colors: ['Blue', 'Pink', 'Green', 'Yellow', 'Purple'],
+      inStock: true,
+      category: 'Tops',
+      brand: 'Groomy Solutions'
+    },
+    19: {
+      id: 19,
+      name: 'Velvet Lehenga Choli',
+      price: 4999,
+      originalPrice: 7999,
+      discount: 38,
+      rating: 4.8,
+      reviews: 67,
+      description: 'Luxurious velvet lehenga choli with heavy embroidery work. Perfect for weddings and grand celebrations. Premium quality fabric and craftsmanship.',
+      features: [
+        'Premium velvet fabric',
+        'Heavy embroidery work',
+        'Complete 3-piece set',
+        'Perfect for weddings',
+        'Luxurious design',
+        'Premium craftsmanship'
+      ],
+      images: [
+        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
+      ],
+      sizes: ['XS', 'S', 'M', 'L', 'XL'],
+      colors: ['Maroon', 'Navy', 'Green', 'Purple', 'Red'],
+      inStock: true,
+      category: 'Lehengas',
+      brand: 'Groomy Solutions'
+    },
+    20: {
+      id: 20,
+      name: 'Cotton Churidar Set',
+      price: 1599,
+      originalPrice: 2299,
+      discount: 30,
+      rating: 4.4,
+      reviews: 189,
+      description: 'Comfortable cotton churidar set perfect for daily wear and casual occasions. Soft cotton fabric with beautiful design and comfortable fit.',
+      features: [
+        'Soft cotton fabric',
+        'Comfortable churidar style',
+        'Perfect for daily wear',
+        'Beautiful design',
+        'Easy to maintain',
+        'Breathable fabric'
+      ],
+      images: [
+        'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
+      ],
+      sizes: ['XS', 'S', 'M', 'L', 'XL'],
+      colors: ['White', 'Blue', 'Pink', 'Yellow', 'Green'],
+      inStock: true,
+      category: 'Suits',
       brand: 'Groomy Solutions'
     }
   }

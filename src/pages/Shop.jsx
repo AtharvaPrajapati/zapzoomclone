@@ -19,7 +19,10 @@ const Shop = ({ addToCart }) => {
     { id: 'kurtis', name: 'Kurtis' },
     { id: 'lehengas', name: 'Lehengas' },
     { id: 'suits', name: 'Suits' },
-    { id: 'accessories', name: 'Accessories' }
+    { id: 'dupatta', name: 'Dupatta' },
+    { id: 'blouse', name: 'Blouse' },
+    { id: 'bottoms', name: 'Bottoms' },
+    { id: 'tops', name: 'Tops' }
   ]
 
   const sizes = [
