@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Heart, ShoppingCart, Eye, Star, CreditCard } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { useResponsive } from '../hooks/useResponsive'
 import RazorpayPayment from './RazorpayPayment'
@@ -74,7 +74,7 @@ const ProductCard = ({
   }
 
   return (
-    <div className="group bg-white rounded-lg sm:rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 relative">
+    <Link to={`/product/${product.id}`} className="block group bg-white rounded-lg sm:rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 relative">
       {/* Product Image */}
       <div className="relative overflow-hidden aspect-square">
         {!imageLoaded && (
@@ -249,7 +249,7 @@ const ProductCard = ({
         onClose={() => setShowSuccessModal(false)}
         orderDetails={orderDetails}
       />
-    </div>
+    </Link>
   )
 }
 

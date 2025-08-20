@@ -27,7 +27,7 @@ const ProductGrid = ({ addToCart }) => {
       price: 899,
       originalPrice: 1299,
       discount: 31,
-      image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?fit=crop&w=500&q=80",
+      image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       rating: 4.5,
       reviews: 128,
       isHot: true
@@ -39,23 +39,12 @@ const ProductGrid = ({ addToCart }) => {
       price: 2499,
       originalPrice: 3999,
       discount: 38,
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?fit=crop&w=500&q=80",
+      image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       rating: 4.8,
       reviews: 89,
       isHot: false
     },
-    {
-      id: 3,
-      name: "Embroidered Cotton Kurti",
-      category: "kurtis",
-      price: 649,
-      originalPrice: 899,
-      discount: 28,
-      image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?fit=crop&w=500&q=80",
-      rating: 4.3,
-      reviews: 156,
-      isHot: true
-    },
+ 
     {
       id: 4,
       name: "Designer Georgette Saree",
@@ -63,7 +52,7 @@ const ProductGrid = ({ addToCart }) => {
       price: 1899,
       originalPrice: 2799,
       discount: 32,
-      image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?fit=crop&w=500&q=80",
+      image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       rating: 4.6,
       reviews: 203,
       isHot: false
@@ -75,7 +64,7 @@ const ProductGrid = ({ addToCart }) => {
       price: 299,
       originalPrice: 499,
       discount: 40,
-      image: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?fit=crop&w=500&q=80",
+      image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       rating: 4.2,
       reviews: 67,
       isHot: true
@@ -87,7 +76,7 @@ const ProductGrid = ({ addToCart }) => {
       price: 799,
       originalPrice: 1199,
       discount: 33,
-      image: "https://images.unsplash.com/photo-1519985176271-adb1088fa94c?fit=crop&w=500&q=80",
+      image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       rating: 4.4,
       reviews: 94,
       isHot: false
@@ -99,7 +88,7 @@ const ProductGrid = ({ addToCart }) => {
       price: 549,
       originalPrice: 799,
       discount: 31,
-      image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?fit=crop&w=500&q=80",
+      image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       rating: 4.1,
       reviews: 112,
       isHot: true
@@ -111,7 +100,7 @@ const ProductGrid = ({ addToCart }) => {
       price: 3299,
       originalPrice: 4999,
       discount: 34,
-      image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?fit=crop&w=500&q=80",
+      image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       rating: 4.9,
       reviews: 78,
       isHot: false

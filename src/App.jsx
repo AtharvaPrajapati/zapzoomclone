@@ -6,6 +6,7 @@ import DashboardLayout from './components/DashboardLayout'
 import ProtectedRoute from './components/ProtectedRoute'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
+import ProductDetail from './pages/ProductDetail'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Cart from './pages/Cart'
@@ -16,6 +17,7 @@ import Orders from './pages/Orders'
 import AccountSettings from './pages/AccountSettings'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsConditions from './pages/TermsConditions'
+import ImageTest from './components/ImageTest'
 import ResponsiveTest from './components/ResponsiveTest'
 import { getCart, addToCart as addToCartLS, removeFromCart as removeFromCartLS, updateCartQuantity as updateCartQuantityLS, getTotalPrice, initializeDemoData } from './utils/localStorage'
 import './App.css'
@@ -91,8 +93,17 @@ function App() {
             path="shop"
             element={<Shop addToCart={addToCart} />}
           />
-          
-          
+          <Route
+            path="product/:id"
+            element={
+              <ProductDetail
+                addToCart={addToCart}
+                toggleWishlist={() => {}}
+                isWishlisted={() => false}
+              />
+            }
+          />
+
           <Route
             path="about"
             element={<About />}
@@ -123,6 +134,9 @@ function App() {
         {/* Legal Pages */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-conditions" element={<TermsConditions />} />
+
+        {/* Image Test Page - Development Only */}
+        <Route path="/image-test" element={<ImageTest />} />
 
         {/* Dashboard Routes - Protected */}
         <Route path="/dashboard" element={

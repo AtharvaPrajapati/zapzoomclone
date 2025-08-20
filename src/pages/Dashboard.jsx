@@ -73,24 +73,24 @@ const Dashboard = () => {
   const recommendedProducts = [
     {
       id: 1,
-      name: 'Elegant Silk Kurti',
-      price: 1299,
+      name: 'Elegant Purple Kurti',
+      price: 899,
       rating: 4.5,
-      image: 'https://via.placeholder.com/300x300/8B5CF6/FFFFFF?text=Silk+Kurti'
+      image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
     },
     {
       id: 2,
-      name: 'Designer Saree',
+      name: 'Traditional Silk Saree',
       price: 2499,
       rating: 4.8,
-      image: 'https://via.placeholder.com/300x300/EC4899/FFFFFF?text=Designer+Saree'
+      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
     },
     {
       id: 3,
-      name: 'Cotton Palazzo Set',
-      price: 899,
+      name: 'Embroidered Cotton Kurti',
+      price: 1299,
       rating: 4.3,
-      image: 'https://via.placeholder.com/300x300/10B981/FFFFFF?text=Palazzo+Set'
+      image: 'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
     }
   ]
 
@@ -137,15 +137,24 @@ const Dashboard = () => {
           <div className="grid grid-cols-1 gap-4">
             {recommendedProducts.map((product) => (
               <Link key={product.id} to={`/product/${product.id}`} className="border border-gray-200 rounded-lg p-4 hover:shadow-sm transition-shadow group">
-                <div className="aspect-square bg-gray-200 rounded-lg mb-3 overflow-hidden">
+                <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg mb-3 overflow-hidden relative">
                   <img
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/300x300/8B5CF6/FFFFFF?text=Product'
+                    onLoad={(e) => {
+                      e.target.style.opacity = '1'
                     }}
+                    onError={(e) => {
+                      console.log('Image failed to load:', product.image)
+                      e.target.style.display = 'none'
+                      e.target.nextElementSibling.style.display = 'flex'
+                    }}
+                    style={{ opacity: 0, transition: 'opacity 0.3s ease' }}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-primary-600 text-white items-center justify-center text-sm font-medium hidden">
+                    <span className="text-center px-2">{product.name}</span>
+                  </div>
                 </div>
                 <h4 className="font-medium text-gray-900 mb-1">{product.name}</h4>
                 <div className="flex items-center justify-between">

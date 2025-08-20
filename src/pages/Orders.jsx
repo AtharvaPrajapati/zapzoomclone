@@ -20,7 +20,7 @@ const Orders = () => {
       items: [
         {
           name: 'Elegant Silk Saree',
-          image: 'https://via.placeholder.com/300x300/8B5CF6/FFFFFF?text=Silk+Saree',
+          image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
           price: 2499,
           quantity: 1
         }
@@ -36,7 +36,7 @@ const Orders = () => {
       items: [
         {
           name: 'Cotton Printed Kurti',
-          image: 'https://via.placeholder.com/300x300/EC4899/FFFFFF?text=Cotton+Kurti',
+          image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
           price: 1899,
           quantity: 1
         }
@@ -52,7 +52,7 @@ const Orders = () => {
       items: [
         {
           name: 'Designer Anarkali Suit',
-          image: 'https://via.placeholder.com/300x300/10B981/FFFFFF?text=Anarkali+Suit',
+          image: 'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
           price: 3299,
           quantity: 1
         }
@@ -176,15 +176,24 @@ const Orders = () => {
                   <div className="space-y-3 mb-4">
                     {order.items.map((item, index) => (
                       <div key={index} className="flex flex-col sm:flex-row items-center sm:items-start space-y-2 sm:space-y-0 sm:space-x-4">
-                        <div className="w-16 h-16 flex-shrink-0">
+                        <div className="w-16 h-16 flex-shrink-0 relative bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg overflow-hidden">
                           <img
                             src={item.image}
                             alt={item.name}
                             className="w-16 h-16 object-cover rounded-lg"
-                            onError={(e) => {
-                              e.target.src = 'https://via.placeholder.com/64x64/8B5CF6/FFFFFF?text=Item'
+                            onLoad={(e) => {
+                              e.target.style.opacity = '1'
                             }}
+                            onError={(e) => {
+                              console.log('Order image failed to load:', item.image)
+                              e.target.style.display = 'none'
+                              e.target.nextElementSibling.style.display = 'flex'
+                            }}
+                            style={{ opacity: 0, transition: 'opacity 0.3s ease' }}
                           />
+                          <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-primary-600 text-white items-center justify-center text-xs font-medium hidden">
+                            <span className="text-center">{item.name.split(' ')[0]}</span>
+                          </div>
                         </div>
                         <div className="flex-1 text-center sm:text-left">
                           <h4 className="font-medium text-gray-900">{item.name}</h4>
