@@ -8,39 +8,40 @@ const Hero = () => {
   const [touchEnd, setTouchEnd] = useState(null)
   const { isMobile } = useResponsive()
   const sliderRef = useRef(null)
+const slides = [
+  {
+    id: 1,
+    title: "Premium Ethnic Collection",
+    subtitle: "Discover Timeless Elegance",
+    description: "Handcrafted Sarees & Kurtis for Every Occasion",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?fit=crop&w=800&q=80",
+    buttonText: "Shop Collection",
+    buttonLink: "#shop",
+    offer: "Up to 50% Off"
+  },
+  {
+    id: 2,
+    title: "Festive Special",
+    subtitle: "Celebrate in Style",
+    description: "Exclusive Designs for Festival Season",
+    image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?fit=crop&w=800&q=80",
+    buttonText: "Explore Now",
+    buttonLink: "#collection",
+    offer: "New Arrivals"
+  },
+  {
+    id: 3,
+    title: "Bridal Collection",
+    subtitle: "Your Dream Wedding Look",
+    description: "Exquisite Bridal Wear for Your Special Day",
+    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?fit=crop&w=800&q=80",
+    buttonText: "View Bridal",
+    buttonLink: "#bridal",
+    offer: "Limited Edition"
+  }
+];
 
-  const slides = [
-    {
-      id: 1,
-      title: "Premium Ethnic Collection",
-      subtitle: "Discover Timeless Elegance",
-      description: "Handcrafted Sarees & Kurtis for Every Occasion",
-      image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      buttonText: "Shop Collection",
-      buttonLink: "#shop",
-      offer: "Up to 50% Off"
-    },
-    {
-      id: 2,
-      title: "Festive Special",
-      subtitle: "Celebrate in Style",
-      description: "Exclusive Designs for Festival Season",
-      image: "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      buttonText: "Explore Now",
-      buttonLink: "#collection",
-      offer: "New Arrivals"
-    },
-    {
-      id: 3,
-      title: "Bridal Collection",
-      subtitle: "Your Dream Wedding Look",
-      description: "Exquisite Bridal Wear for Your Special Day",
-      image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      buttonText: "View Bridal",
-      buttonLink: "#bridal",
-      offer: "Limited Edition"
-    }
-  ]
+
 
   useEffect(() => {
     const timer = setInterval(() => {

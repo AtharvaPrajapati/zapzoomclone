@@ -16,9 +16,8 @@ const razorpay = new Razorpay({
 app.post('/verify-payment', (req, res) => {
   const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
   const generated_signature = crypto.createHmac('sha256', razorpay.key_secret)
-    .update(razorpay_order_id + "|" + razorpay_payment_id)
+    .update(razorpay_order_id + '|' + razorpay_payment_id)
     .digest('hex');
-
   if (generated_signature === razorpay_signature) {
     return res.json({ success: true });
   } else {
@@ -30,7 +29,6 @@ app.post('/create-order', async (req, res) => {
   const { amount, currency, receipt, notes } = req.body;
   try {
     const options = {
-      key: 'rzp_test_R7H4c0ZpjgDeo0', // Must match backend key_id
       amount: amount || 100, // amount in paise
       currency: currency || 'INR',
       receipt: receipt || `receipt_${Date.now()}`,
@@ -39,8 +37,26 @@ app.post('/create-order', async (req, res) => {
     const order = await razorpay.orders.create(options);
     res.json(order); // Return full order object
   } catch (error) {
+    console.error(error); // Log the full error for debugging
     res.status(500).json({ error: error.message });
   }
+});
+
+// Test order endpoint for demo purposes
+app.post('/test-order', (req, res) => {
+  const { amount, currency, receipt, notes } = req.body;
+  // Simulate a successful order creation
+  const testOrder = {
+    id: `order_test_${Date.now()}`,
+    entity: 'order',
+    amount: amount || 100,
+    currency: currency || 'INR',
+    receipt: receipt || `receipt_${Date.now()}`,
+    status: 'created',
+    notes: notes || { type: 'test' },
+    order_id: `order_test_${Date.now()}`
+  };
+  res.json(testOrder);
 });
 
 const PORT = process.env.PORT || 5000;

@@ -53,7 +53,7 @@ const Register = () => {
     <Header/>
     <div className="min-h-screen bg-gray-50">
       <PageHeader
-        title="Join ZapZoom"
+        title="Joingroomy solutions"
         subtitle="Create your account and start your fashion journey with us"
         backgroundImage="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
       />

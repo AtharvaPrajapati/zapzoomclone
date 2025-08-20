@@ -65,9 +65,9 @@ const DashboardLayout = () => {
           <div className="flex items-center justify-between p-6 border-b bg-gradient-to-r from-primary-500 to-primary-600">
             <Link to="/" className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-primary-600 font-bold text-lg">Z</span>
+                <span className="text-primary-600 font-bold text-lg">G</span>
               </div>
-              <span className="font-bold text-white text-xl">ZapZoom</span>
+              <span className="font-bold text-white text-xl">groomy solutions</span>
             </Link>
             <button onClick={() => setIsSidebarOpen(false)} className="lg:hidden p-2 rounded-lg hover:bg-primary-400 text-white">
               <X className="h-5 w-5" />
@@ -137,7 +137,7 @@ const DashboardLayout = () => {
       </aside>
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col lg:ml-72">
+      <div className="flex-1 flex flex-col">
         {/* Header */}
         <Header
           cartItems={cartItems}
@@ -148,23 +148,20 @@ const DashboardLayout = () => {
 
         {/* Top Bar */}
         <div className="bg-white shadow-sm border-b">
-          <div className="px-6 lg:px-8 py-6 flex items-center justify-between">
-            <div className="flex items-center space-x-4">
+          <div className="px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-0">
+            <div className="flex flex-col items-center sm:items-start text-center sm:text-left w-full sm:w-auto">
               <button
                 onClick={() => setIsSidebarOpen(true)}
-                className="lg:hidden p-3 rounded-xl hover:bg-gray-100 transition-colors"
+                className="lg:hidden p-3 rounded-xl hover:bg-gray-100 transition-colors self-start mb-2 sm:mb-0"
               >
                 <Menu className="h-6 w-6" />
               </button>
-              <div>
-                <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-                <p className="text-gray-600 mt-1">Manage your account and preferences</p>
-              </div>
+              <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+              <p className="text-gray-600 mt-1">Manage your account and preferences</p>
             </div>
-
             <Link
               to="/shop"
-              className="inline-flex items-center px-6 py-3 border border-transparent font-semibold rounded-xl text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="inline-flex items-center justify-center px-6 py-3 border border-transparent font-semibold rounded-xl text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto"
             >
               <ShoppingBag className="h-5 w-5 mr-2" />
               Continue Shopping

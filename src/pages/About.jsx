@@ -36,8 +36,8 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen">
       <PageHeader
-        title="About ZapZoom"
-        subtitle="Welcome to ZapZoom Technologies Private Limited, your premier destination for elegant and stylish women's ethnic fashion. Based in the heart of India, we are passionate about providing high-quality, trendy, and comfortable ethnic wear."
+        title="Aboutgroomy solutions"
+        subtitle="Welcome togroomy solutions Technologies Private Limited, your premier destination for elegant and stylish women's ethnic fashion. Based in the heart of India, we are passionate about providing high-quality, trendy, and comfortable ethnic wear."
         backgroundImage="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
       />
 
@@ -219,7 +219,7 @@ const AboutPage = () => {
             <div>
               <Phone className="h-8 w-8 mx-auto mb-4 text-primary-200" />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
-              <p className="text-primary-100">+91 80XXXXXXXX</p>
+              <p className="text-primary-100">+918222830653</p>
             </div>
             <div>
               <Mail className="h-8 w-8 mx-auto mb-4 text-primary-200" />

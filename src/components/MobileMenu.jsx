@@ -52,7 +52,7 @@ const MobileMenu = ({ isOpen, onClose, cartItems, totalItems }) => {
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b bg-gradient-to-r from-purple-600 to-pink-600">
             <div>
-              <h2 className="text-xl font-bold text-white">ZAPZOOM</h2>
+              <h2 className="text-xl font-bold text-white">GROOMY SOLUTIONS</h2>
               <p className="text-xs text-purple-100">Fashion Collection</p>
             </div>
             <button

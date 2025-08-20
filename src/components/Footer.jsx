@@ -54,7 +54,7 @@ const Footer = () => {
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="mb-4 sm:mb-6">
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                ZAPZOOM
+               groomy solutions
               </h2>
               <p className="text-sm text-primary-200">Fashion Collection</p>
             </div>
@@ -130,8 +130,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-pink-400 flex-shrink-0" />
-                <a href="tel:+918XXXXXXXX" className="text-purple-200 hover:text-white transition-colors text-sm sm:text-base touch-manipulation">
-                  +91 80XXXXXXXXX
+                <a href="tel:+918222830653" className="text-purple-200 hover:text-white transition-colors text-sm sm:text-base touch-manipulation">
+                  +918222830653
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -165,7 +165,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-purple-200 text-xs sm:text-sm text-center md:text-left">
-              © 2024 ZAPZOOM TECHNOLOGIES PRIVATE LIMITED. All rights reserved.
+              © 2024groomy solutions TECHNOLOGIES PRIVATE LIMITED. All rights reserved.
             </p>
 
           </div>

@@ -38,7 +38,7 @@ const Shop = ({ addToCart }) => {
       <PageHeader
         title="Shop Our Collection"
         subtitle="Discover our complete range of elegant ethnic wear designed for every occasion"
-        backgroundImage="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+        backgroundImage="https://images.unsplash.com/photo-1517841905240-472988babdf9?fit=crop&w=1200&q=80"
       />
 
       {/* Top Selling Banner */}

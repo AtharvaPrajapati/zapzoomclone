@@ -77,7 +77,7 @@ const PaymentSuccessModal = ({ isOpen, onClose, orderDetails }) => {
         {/* Thank You Message */}
         <div className="text-center mt-6 pt-6 border-t border-gray-200">
           <p className="text-sm text-gray-600">
-            Thank you for shopping with <span className="font-semibold text-primary-600">ZapZoom</span>!
+            Thank you for shopping with <span className="font-semibold text-primary-600">groomy solutions</span>!
           </p>
           <p className="text-xs text-gray-500 mt-1">
             You will receive an email confirmation shortly.

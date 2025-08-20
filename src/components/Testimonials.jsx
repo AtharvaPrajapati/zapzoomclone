@@ -10,8 +10,8 @@ const Testimonials = () => {
       name: "Priya Sharma",
       location: "Mumbai, Maharashtra",
       rating: 5,
-      comment: "Absolutely love the quality of kurtis from ZapZoom! The fabric is so soft and the designs are stunning. I've ordered multiple times and never been disappointed.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      comment: "Absolutely love the quality of kurtis fromgroomy solutions! The fabric is so soft and the designs are stunning. I've ordered multiple times and never been disappointed.",
+      image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?fit=crop&w=150&q=80",
       product: "Embroidered Cotton Kurti"
     },
     {

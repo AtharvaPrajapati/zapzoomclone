@@ -1,4 +1,5 @@
 import { Award, Users, Heart, Sparkles } from 'lucide-react'
+import ResponsiveImage from './ResponsiveImage'
 
 const About = () => {
   const values = [
@@ -30,10 +31,10 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-            About <span className="text-primary-500">ZapZoom</span>
+            About <span className="text-primary-500">groomy solutions</span>
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-            Welcome to ZapZoom Technologies Private Limited, your premier destination for elegant and stylish women's ethnic fashion.
+            Welcome togroomy solutions Technologies Private Limited, your premier destination for elegant and stylish women's ethnic fashion.
             Based in the heart of India, we are passionate about providing high-quality, trendy, and comfortable Kurtis and Sarees
             that cater to the diverse fashion tastes of modern women.
           </p>
@@ -44,10 +45,11 @@ const About = () => {
           {/* Image */}
           <div className="relative order-2 lg:order-1">
             <div className="aspect-square rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              <ResponsiveImage
+                src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?fit=crop&w=800&q=80"
                 alt="Traditional Indian Fashion"
                 className="w-full h-full object-cover"
+                aspectRatio="square"
               />
             </div>
             {/* Decorative Elements */}
@@ -61,7 +63,7 @@ const About = () => {
               Crafting Elegance Since Our Beginning
             </h3>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              At ZapZoom, we believe that every woman deserves to feel beautiful and confident in what she wears.
+              Atgroomy solutions, we believe that every woman deserves to feel beautiful and confident in what she wears.
               Our carefully curated collection features traditional Indian ethnic wear with a modern twist,
               perfect for both everyday wear and special occasions.
             </p>

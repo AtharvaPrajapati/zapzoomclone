@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { CreditCard, Shield, CheckCircle } from 'lucide-react'
 import { useAuth } from '../contexts/AuthContext'
-import { saveOrder } from '../utils/localStorage'
+import { saveOrder, getUser } from '../utils/localStorage'
 
 const RazorpayPayment = ({ product, onSuccess, onClose }) => {
   const [isProcessing, setIsProcessing] = useState(false)
@@ -51,10 +51,10 @@ const RazorpayPayment = ({ product, onSuccess, onClose }) => {
       return
     }
     const options = {
-      key: 'rzp_test_9WaeLLXnagzude', // Use your test key
+      key: 'rzp_test_R7H4c0ZpjgDeo0', // Use your test key
       amount: orderResponse.amount,
       currency: orderResponse.currency,
-      name: 'ZapZoom',
+      name: 'Groomy Solutions',
       description: `Payment for ${product.name}`,
       image: 'https://your-logo-url.com/logo.png',
       order_id: orderResponse.order_id, // Use backend order_id

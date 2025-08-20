@@ -28,11 +28,11 @@ export const SORT_OPTIONS = {
 }
 
 export const COMPANY_INFO = {
-  name: 'ZAPZOOM TECHNOLOGIES PRIVATE LIMITED',
-  shortName: 'ZapZoom',
+  name: 'GROOMY SOLUTIONS PRIVATE LIMITED',
+  shortName: 'Groomy Solutions',
   tagline: 'Fashion Collection',
-  phone: '+91 8090821861',
-  email: 'zapzoom413@gmail.com',
+  phone: '+918222830653',
+  email: 'groomysolutions413@gmail.com',
   address: {
     line1: 'Arazi No-965, Plot No-18, Part-4',
     line2: 'Ganga Ganj, Panki, Kanpur',

@@ -16,13 +16,13 @@ export const AuthProvider = ({ children }) => {
 
   // Load user from localStorage on mount
   useEffect(() => {
-    const savedUser = localStorage.getItem('zapzoom_user')
+    const savedUser = localStorage.getItem('groomy_solutions_user')
     if (savedUser) {
       try {
         setUser(JSON.parse(savedUser))
       } catch (error) {
         console.error('Error parsing saved user:', error)
-        localStorage.removeItem('zapzoom_user')
+        localStorage.removeItem('groomy_solutions_user')
       }
     }
     setIsLoading(false)
@@ -35,21 +35,21 @@ export const AuthProvider = ({ children }) => {
       loginTime: new Date().toISOString()
     }
     setUser(userWithId)
-    localStorage.setItem('zapzoom_user', JSON.stringify(userWithId))
+    localStorage.setItem('groomy_solutions_user', JSON.stringify(userWithId))
     return userWithId
   }
 
   const logout = () => {
     setUser(null)
-    localStorage.removeItem('zapzoom_user')
-    localStorage.removeItem('zapzoom_cart')
+    localStorage.removeItem('groomy_solutions_user')
+    localStorage.removeItem('groomy_solutions_cart')
     // Keep orders for demo purposes
   }
 
   const updateUser = (updates) => {
     const updatedUser = { ...user, ...updates }
     setUser(updatedUser)
-    localStorage.setItem('zapzoom_user', JSON.stringify(updatedUser))
+    localStorage.setItem('groomy_solutions_user', JSON.stringify(updatedUser))
   }
 
   const isAuthenticated = !!user

@@ -29,22 +29,7 @@ const Header = ({
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-primary-500 text-white py-1 sm:py-2 px-2 sm:px-4">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm gap-1 sm:gap-0">
-          <div className="text-center sm:text-left">
-            <span className="block sm:inline">🎉 Free shipping on orders over ₹999</span>
-            <span className="hidden md:inline"> | Call: +91 8090821861</span>
-          </div>
-          <div className="flex items-center space-x-2 sm:space-x-4">
-            <span className="hidden sm:block text-xs">Follow us:</span>
-            <div className="flex space-x-1 sm:space-x-2">
-              <a href="#" className="hover:text-primary-200 transition-colors text-xs px-1">FB</a>
-              <a href="#" className="hover:text-primary-200 transition-colors text-xs px-1">IG</a>
-              <a href="#" className="hover:text-primary-200 transition-colors text-xs px-1">TW</a>
-            </div>
-          </div>
-        </div>
-      </div>
+   
 
       {/* Main Header */}
       <header className="bg-black shadow-lg sticky top-0 z-50">
@@ -54,7 +39,7 @@ const Header = ({
             <div className="flex-shrink-0 min-w-0">
               <Link to="/" className="block">
                 <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white truncate">
-                  ZAPZOOM
+                 groomy solutions
                 </h1>
                 <p className="text-xs text-gray-300 hidden sm:block">Fashion Collection</p>
               </Link>

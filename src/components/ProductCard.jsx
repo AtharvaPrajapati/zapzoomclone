@@ -6,6 +6,7 @@ import { useResponsive } from '../hooks/useResponsive'
 import RazorpayPayment from './RazorpayPayment'
 import LoginModal from './LoginModal'
 import PaymentSuccessModal from './PaymentSuccessModal'
+import ResponsiveImage from './ResponsiveImage'
 
 const ProductCard = ({
   product,
@@ -82,14 +83,11 @@ const ProductCard = ({
           </div>
         )}
         
-        <img
+        <ResponsiveImage
           src={product.image}
           alt={product.name}
-          className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ${
-            imageLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          onLoad={() => setImageLoaded(true)}
-          loading="lazy"
+          className="w-full h-full group-hover:scale-105 transition-transform duration-300"
+          aspectRatio="square"
         />
         
         {/* Badges */}

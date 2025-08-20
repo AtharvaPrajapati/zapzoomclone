@@ -1,9 +1,9 @@
-// Local Storage Utilities for ZapZoom E-commerce
+// Local Storage Utilities forgroomy solutions E-commerce
 
 // Cart Management
 export const getCart = () => {
   try {
-    const cart = localStorage.getItem('zapzoom_cart')
+    const cart = localStorage.getItem('groomy_solutions_cart')
     return cart ? JSON.parse(cart) : []
   } catch (error) {
     console.error('Error getting cart:', error)
@@ -13,7 +13,7 @@ export const getCart = () => {
 
 export const saveCart = (cartItems) => {
   try {
-    localStorage.setItem('zapzoom_cart', JSON.stringify(cartItems))
+    localStorage.setItem('groomy_solutions_cart', JSON.stringify(cartItems))
   } catch (error) {
     console.error('Error saving cart:', error)
   }
@@ -56,14 +56,14 @@ export const updateCartQuantity = (productId, quantity) => {
 }
 
 export const clearCart = () => {
-  localStorage.removeItem('zapzoom_cart')
+  localStorage.removeItem('groomy_solutions_cart')
   return []
 }
 
 // Orders Management
 export const getOrders = (userId = null) => {
   try {
-    const orders = localStorage.getItem('zapzoom_orders')
+    const orders = localStorage.getItem('groomy_solutions_orders')
     const allOrders = orders ? JSON.parse(orders) : []
     
     if (userId) {
@@ -88,7 +88,7 @@ export const saveOrder = (orderData) => {
     }
     
     orders.push(newOrder)
-    localStorage.setItem('zapzoom_orders', JSON.stringify(orders))
+    localStorage.setItem('groomy_solutions_orders', JSON.stringify(orders))
     return newOrder
   } catch (error) {
     console.error('Error saving order:', error)
@@ -104,7 +104,7 @@ export const updateOrderStatus = (orderId, status) => {
     if (order) {
       order.status = status
       order.updatedAt = new Date().toISOString()
-      localStorage.setItem('zapzoom_orders', JSON.stringify(orders))
+      localStorage.setItem('groomy_solutions_orders', JSON.stringify(orders))
     }
     
     return order
@@ -117,7 +117,7 @@ export const updateOrderStatus = (orderId, status) => {
 // User Management
 export const getUser = () => {
   try {
-    const user = localStorage.getItem('zapzoom_user')
+    const user = localStorage.getItem('groomy_solutions_user')
     return user ? JSON.parse(user) : null
   } catch (error) {
     console.error('Error getting user:', error)
@@ -127,20 +127,20 @@ export const getUser = () => {
 
 export const saveUser = (userData) => {
   try {
-    localStorage.setItem('zapzoom_user', JSON.stringify(userData))
+    localStorage.setItem('groomy_solutions_user', JSON.stringify(userData))
   } catch (error) {
     console.error('Error saving user:', error)
   }
 }
 
 export const removeUser = () => {
-  localStorage.removeItem('zapzoom_user')
+  localStorage.removeItem('groomy_solutions_user')
 }
 
 // Wishlist Management
 export const getWishlist = (userId) => {
   try {
-    const wishlist = localStorage.getItem(`zapzoom_wishlist_${userId}`)
+    const wishlist = localStorage.getItem(`groomy_solutions_wishlist_${userId}`)
     return wishlist ? JSON.parse(wishlist) : []
   } catch (error) {
     console.error('Error getting wishlist:', error)
@@ -155,7 +155,7 @@ export const addToWishlist = (userId, product) => {
     
     if (!exists) {
       wishlist.push(product)
-      localStorage.setItem(`zapzoom_wishlist_${userId}`, JSON.stringify(wishlist))
+      localStorage.setItem(`groomy_solutions_wishlist_${userId}`, JSON.stringify(wishlist))
     }
     
     return wishlist
@@ -169,7 +169,7 @@ export const removeFromWishlist = (userId, productId) => {
   try {
     const wishlist = getWishlist(userId)
     const updatedWishlist = wishlist.filter(item => item.id !== productId)
-    localStorage.setItem(`zapzoom_wishlist_${userId}`, JSON.stringify(updatedWishlist))
+    localStorage.setItem(`groomy_solutions_wishlist_${userId}`, JSON.stringify(updatedWishlist))
     return updatedWishlist
   } catch (error) {
     console.error('Error removing from wishlist:', error)
@@ -211,6 +211,6 @@ export const initializeDemoData = () => {
         paymentId: 'pay_demo_001'
       }
     ]
-    localStorage.setItem('zapzoom_orders', JSON.stringify(demoOrders))
+    localStorage.setItem('groomy_solutions_orders', JSON.stringify(demoOrders))
   }
 }

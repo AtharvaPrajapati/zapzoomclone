@@ -1,12 +1,15 @@
+import Header from '../components/Header'
 import PageHeader from '../components/PageHeader'
 
 const TermsConditions = () => {
   return (
+    <>
+  <Header/>
     <div className="min-h-screen bg-gray-50">
       <PageHeader
         title="Terms & Conditions"
         subtitle="Please read these terms and conditions carefully before using our services."
-        backgroundImage="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+        backgroundImage="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?fit=crop&w=1200&q=80"
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -19,7 +22,7 @@ const TermsConditions = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-600 mb-4">
-                By accessing and using ZapZoom's website and services, you accept and agree to be bound 
+                By accessing and usinggroomy solutions's website and services, you accept and agree to be bound 
                 by the terms and provision of this agreement. If you do not agree to abide by the above, 
                 please do not use this service.
               </p>
@@ -28,7 +31,7 @@ const TermsConditions = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Products and Services</h2>
               <p className="text-gray-600 mb-4">
-                ZapZoom provides ethnic wear and fashion accessories for women. All product descriptions, 
+               groomy solutions provides ethnic wear and fashion accessories for women. All product descriptions, 
                 images, and prices are subject to change without notice.
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
@@ -97,7 +100,7 @@ const TermsConditions = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Intellectual Property</h2>
               <p className="text-gray-600 mb-4">
-                All content on this website is owned by ZapZoom or its licensors and is protected by 
+                All content on this website is owned bygroomy solutions or its licensors and is protected by 
                 copyright and other intellectual property laws.
               </p>
             </section>
@@ -105,7 +108,7 @@ const TermsConditions = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Limitation of Liability</h2>
               <p className="text-gray-600 mb-4">
-                ZapZoom shall not be liable for any indirect, incidental, special, or consequential 
+               groomy solutions shall not be liable for any indirect, incidental, special, or consequential 
                 damages arising from your use of our services.
               </p>
             </section>
@@ -134,7 +137,7 @@ const TermsConditions = () => {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="text-gray-600">
                   <strong>ZapZoom Technologies Private Limited</strong><br />
-                  <strong>Email:</strong> zapzoom413@gmail.com<br />
+                  <strong>Email:</strong>groomy solutions413@gmail.com<br />
                   <strong>Phone:</strong> +91 8090821861<br />
                   <strong>Address:</strong> Arazi No-965, Plot No-18, Part-4, Ganga Ganj, Panki, Kanpur, Uttar Pradesh, 208020
                 </p>
@@ -144,6 +147,8 @@ const TermsConditions = () => {
         </div>
       </div>
     </div>
+    </>
+
   )
 }
 

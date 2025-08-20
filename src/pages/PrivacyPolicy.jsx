@@ -1,7 +1,10 @@
+import Header from '../components/Header'
 import PageHeader from '../components/PageHeader'
 
 const PrivacyPolicy = () => {
   return (
+    <>
+<Header/>
     <div className="min-h-screen bg-gray-50">
       <PageHeader
         title="Privacy Policy"
@@ -115,8 +118,8 @@ const PrivacyPolicy = () => {
               </p>
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="text-gray-600">
-                  <strong>Email:</strong> zapzoom413@gmail.com<br />
-                  <strong>Phone:</strong> +91 8090821861<br />
+                  <strong>Email:</strong>groomy solutions413@gmail.com<br />
+                  <strong>Phone:</strong> +918222830653<br />
                   <strong>Address:</strong> Arazi No-965, Plot No-18, Part-4, Ganga Ganj, Panki, Kanpur, Uttar Pradesh, 208020
                 </p>
               </div>
@@ -125,6 +128,8 @@ const PrivacyPolicy = () => {
         </div>
       </div>
     </div>
+    </>
+
   )
 }
 

@@ -48,7 +48,7 @@ const Contact = () => {
       icon: Phone,
       title: "Call Us",
       details: [
-        "+91 99xxxxxx",
+        "+918222830653",
         "Mon-Sat: 10:00 AM - 8:00 PM",
         "Sunday: 11:00 AM - 6:00 PM"
       ]
@@ -211,8 +211,8 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Find Us</h3>
             <div className="rounded-lg overflow-hidden h-64">
           <iframe
-            title="Zapzoom Technologies Private Limited Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.1929567097013!2d80.3319!3d26.4499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c38c16b1c8fbd%3A0x123456789abcdef!2sZAPZOOM%20Technologies%20Private%20Limited!5e0!3m2!1sen!2sin!4v1692198890000!5m2!1sen!2sin"
+            title="groomy solutions Private Limited Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.1929567097013!2d80.3319!3d26.4499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c38c16b1c8fbd%3A0x123456789abcdef!2sgroomy%20solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1692198890000!5m2!1sen!2sin"
             width="100%"
             height="100%"
             allowFullScreen=""

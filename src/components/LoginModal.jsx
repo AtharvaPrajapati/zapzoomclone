@@ -104,7 +104,7 @@ const LoginModal = ({ isOpen, onClose, onSuccess }) => {
             {isLogin ? 'Welcome Back' : 'Create Account'}
           </h2>
           <p className="text-gray-600">
-            {isLogin ? 'Sign in to continue shopping' : 'Join ZapZoom today'}
+            {isLogin ? 'Sign in to continue shopping' : 'Joingroomy solutions today'}
           </p>
         </div>
 
