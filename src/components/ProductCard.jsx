@@ -164,13 +164,6 @@ const ProductCard = ({
               <ShoppingCart className="h-3 w-3" />
               Add
             </button>
-            <button
-              onClick={handleBuyNow}
-              className="flex-1 bg-primary-500 text-white py-2 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 flex items-center justify-center gap-1 text-xs"
-            >
-              <CreditCard className="h-3 w-3" />
-              Buy
-            </button>
           </div>
         )}
 
