@@ -59,7 +59,9 @@ const DashboardLayout = () => {
   return (
     <div className="min-h-screen flex bg-gray-50">
       {/* Sidebar */}
-      <aside className={`fixed top-0 left-0 h-full w-72 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out lg:translate-x-0 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+      <aside className={`fixed top-0 left-0 h-full w-72 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out
+        ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+        lg:translate-x-0 lg:static lg:block`}>
         <div className="flex flex-col h-full">
           {/* Sidebar Header */}
           <div className="flex items-center justify-between p-6 border-b bg-gradient-to-r from-primary-500 to-primary-600">
@@ -137,7 +139,7 @@ const DashboardLayout = () => {
       </aside>
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col min-w-0">
         {/* Header */}
         <Header
           cartItems={cartItems}
@@ -170,7 +172,7 @@ const DashboardLayout = () => {
         </div>
 
         {/* Page Content */}
-        <main className="p-6 lg:p-8 bg-gray-50 min-h-screen">
+        <main className="flex-1 bg-gray-50 w-full">
           <Outlet />
         </main>
       </div>

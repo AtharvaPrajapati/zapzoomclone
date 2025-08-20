@@ -204,11 +204,7 @@ const ProductGrid = ({ addToCart }) => {
         </div>
 
         {/* Load More Button */}
-        <div className="text-center mt-8 sm:mt-12">
-          <button className="px-6 sm:px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 touch-manipulation text-sm sm:text-base">
-            Load More Products
-          </button>
-        </div>
+     
       </div>
 
       {/* Quick View Modal */}

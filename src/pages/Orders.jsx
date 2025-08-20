@@ -20,7 +20,7 @@ const Orders = () => {
       items: [
         {
           name: 'Elegant Silk Saree',
-          image: 'https://images.unsplash.com/photo-1583391733956-6c78276477e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
+          image: 'https://via.placeholder.com/300x300/8B5CF6/FFFFFF?text=Silk+Saree',
           price: 2499,
           quantity: 1
         }
@@ -36,7 +36,7 @@ const Orders = () => {
       items: [
         {
           name: 'Cotton Printed Kurti',
-          image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
+          image: 'https://via.placeholder.com/300x300/EC4899/FFFFFF?text=Cotton+Kurti',
           price: 1899,
           quantity: 1
         }
@@ -52,7 +52,7 @@ const Orders = () => {
       items: [
         {
           name: 'Designer Anarkali Suit',
-          image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
+          image: 'https://via.placeholder.com/300x300/10B981/FFFFFF?text=Anarkali+Suit',
           price: 3299,
           quantity: 1
         }
@@ -175,17 +175,22 @@ const Orders = () => {
                   {/* Order Items */}
                   <div className="space-y-3 mb-4">
                     {order.items.map((item, index) => (
-                      <div key={index} className="flex items-center space-x-4">
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          className="w-16 h-16 object-cover rounded-lg"
-                        />
-                        <div className="flex-1">
+                      <div key={index} className="flex flex-col sm:flex-row items-center sm:items-start space-y-2 sm:space-y-0 sm:space-x-4">
+                        <div className="w-16 h-16 flex-shrink-0">
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="w-16 h-16 object-cover rounded-lg"
+                            onError={(e) => {
+                              e.target.src = 'https://via.placeholder.com/64x64/8B5CF6/FFFFFF?text=Item'
+                            }}
+                          />
+                        </div>
+                        <div className="flex-1 text-center sm:text-left">
                           <h4 className="font-medium text-gray-900">{item.name}</h4>
                           <p className="text-sm text-gray-600">Quantity: {item.quantity}</p>
                         </div>
-                        <div className="text-right">
+                        <div className="text-right w-full sm:w-auto">
                           <p className="font-medium text-gray-900">₹{item.price}</p>
                         </div>
                       </div>

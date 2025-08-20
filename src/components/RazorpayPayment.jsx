@@ -30,26 +30,6 @@ const RazorpayPayment = ({ product, onSuccess, onClose }) => {
       setIsProcessing(false)
       return
     }
-    // Always create order on backend and use returned order_id
-    let orderResponse
-    try {
-      orderResponse = await fetch('http://localhost:5000/create-order', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          amount: product.price * 100,
-          currency: 'INR',
-          receipt: `receipt_${Date.now()}`,
-          notes: { product_id: product.id, product_name: product.name }
-        })
-      })
-      orderResponse = await orderResponse.json()
-      if (!orderResponse.order_id) throw new Error('Order creation failed')
-    } catch (err) {
-      alert('Failed to create order: ' + err.message)
-      setIsProcessing(false)
-      return
-    }
     const options = {
       key: 'rzp_test_R7H4c0ZpjgDeo0', // Use your test key
       amount: orderResponse.amount,

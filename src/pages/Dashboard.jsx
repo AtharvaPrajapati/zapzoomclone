@@ -70,11 +70,37 @@ const Dashboard = () => {
     }
   ]
 
+  const recommendedProducts = [
+    {
+      id: 1,
+      name: 'Elegant Silk Kurti',
+      price: 1299,
+      rating: 4.5,
+      image: 'https://via.placeholder.com/300x300/8B5CF6/FFFFFF?text=Silk+Kurti'
+    },
+    {
+      id: 2,
+      name: 'Designer Saree',
+      price: 2499,
+      rating: 4.8,
+      image: 'https://via.placeholder.com/300x300/EC4899/FFFFFF?text=Designer+Saree'
+    },
+    {
+      id: 3,
+      name: 'Cotton Palazzo Set',
+      price: 899,
+      rating: 4.3,
+      image: 'https://via.placeholder.com/300x300/10B981/FFFFFF?text=Palazzo+Set'
+    }
+  ]
+
   return (
-    <div className="flex flex-col lg:flex-row gap-6">
+    <div className="p-4 sm:p-6 lg:p-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-7xl mx-auto">
       {/* ---- Sidebar (My Account) ---- */}
+      <div className="col-span-1 space-y-4">
         {/* Account Status */}
-        <div className="bg-white rounded-lg shadow-sm p-6">
+        <div className="bg-white rounded-lg shadow-sm p-4">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Account Status</h3>
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
@@ -100,9 +126,8 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-
         {/* Recommended Products */}
-        <div className="bg-white rounded-lg shadow-sm p-6">
+        <div className="bg-white rounded-lg shadow-sm p-4">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-gray-900">Recommended</h3>
             <Link to="/shop" className="text-sm text-primary-600 hover:text-primary-700 font-medium">
@@ -110,80 +135,87 @@ const Dashboard = () => {
             </Link>
           </div>
           <div className="grid grid-cols-1 gap-4">
-            {[1, 2, 3].map((item) => (
-              <div key={item} className="border border-gray-200 rounded-lg p-4 hover:shadow-sm transition-shadow">
-                <div className="aspect-square bg-gray-200 rounded-lg mb-3"></div>
-                <h4 className="font-medium text-gray-900 mb-1">Product Name</h4>
+            {recommendedProducts.map((product) => (
+              <Link key={product.id} to={`/product/${product.id}`} className="border border-gray-200 rounded-lg p-4 hover:shadow-sm transition-shadow group">
+                <div className="aspect-square bg-gray-200 rounded-lg mb-3 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      e.target.src = 'https://via.placeholder.com/300x300/8B5CF6/FFFFFF?text=Product'
+                    }}
+                  />
+                </div>
+                <h4 className="font-medium text-gray-900 mb-1">{product.name}</h4>
                 <div className="flex items-center justify-between">
-                  <span className="text-primary-600 font-semibold">₹1,299</span>
+                  <span className="text-primary-600 font-semibold">₹{product.price}</span>
                   <div className="flex items-center">
                     <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                    <span className="text-sm text-gray-600 ml-1">4.5</span>
+                    <span className="text-sm text-gray-600 ml-1">{product.rating}</span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
-
+      </div>
       {/* ---- Dashboard Content ---- */}
-      <main className="flex-1 space-y-6">
+      <main className="col-span-1 lg:col-span-2 space-y-4 w-full">
         {/* Welcome Section */}
-        <div className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl shadow-lg p-8 text-white">
+        <div className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl shadow-lg p-6 text-white">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-3xl font-bold mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-3">
                 Welcome back, {user ? user.firstName : 'User'}!
               </h2>
-              <p className="text-primary-100 text-lg">
+              <p className="text-primary-100 text-base md:text-lg">
                 Here's what's happening with your account today.
               </p>
             </div>
             <div className="hidden md:block">
-              <TrendingUp className="h-20 w-20 text-primary-200" />
+              <TrendingUp className="h-16 w-16 md:h-20 md:w-20 text-primary-200" />
             </div>
           </div>
         </div>
-
         {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {stats.map((stat) => {
             const IconComponent = stat.icon
             return (
               <Link
                 key={stat.name}
                 to={stat.href}
-                className="bg-white rounded-xl shadow-sm p-6 hover:shadow-lg transition-all duration-200 transform hover:scale-105 border border-gray-100"
+                className="bg-white rounded-xl shadow-sm p-4 hover:shadow-lg transition-all duration-200 transform hover:scale-105 border border-gray-100"
               >
                 <div className="flex items-center">
-                  <div className={`${stat.color} p-4 rounded-xl shadow-lg`}>
-                    <IconComponent className="h-7 w-7 text-white" />
+                  <div className={`${stat.color} p-3 rounded-xl shadow-lg`}>
+                    <IconComponent className="h-6 w-6 text-white" />
                   </div>
-                  <div className="ml-5">
-                    <p className="text-sm font-semibold text-gray-600 uppercase tracking-wide">{stat.name}</p>
-                    <p className="text-3xl font-bold text-gray-900 mt-1">{stat.value}</p>
+                  <div className="ml-4">
+                    <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide">{stat.name}</p>
+                    <p className="text-2xl font-bold text-gray-900 mt-1">{stat.value}</p>
                   </div>
                 </div>
               </Link>
             )
           })}
         </div>
-
         {/* Quick Actions */}
         <div className="bg-white rounded-lg shadow-sm">
-          <div className="p-6 border-b border-gray-200">
+          <div className="p-4 border-b border-gray-200">
             <h3 className="text-lg font-semibold text-gray-900">Quick Actions</h3>
           </div>
-          <div className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {quickActions.map((action) => {
               const IconComponent = action.icon
               return (
                 <Link
                   key={action.name}
                   to={action.href}
-                  className="p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:shadow-sm transition-all"
+                  className="p-3 border border-gray-200 rounded-lg hover:border-primary-300 hover:shadow-sm transition-all"
                 >
-                  <div className={`inline-flex p-2 rounded-lg ${action.color} mb-3`}>
+                  <div className={`inline-flex p-2 rounded-lg ${action.color} mb-2`}>
                     <IconComponent className="h-5 w-5" />
                   </div>
                   <h4 className="font-medium text-gray-900 mb-1">{action.name}</h4>
@@ -194,6 +226,7 @@ const Dashboard = () => {
           </div>
         </div>
       </main>
+      </div>
     </div>
   )
 }

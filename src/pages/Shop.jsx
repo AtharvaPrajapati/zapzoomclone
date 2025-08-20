@@ -174,20 +174,7 @@ const Shop = ({ addToCart }) => {
                 </div>
 
                 {/* Top Selling Toggle */}
-                <div>
-                  <label className="flex items-center space-x-3">
-                    <input
-                      type="checkbox"
-                      checked={showTopSelling}
-                      onChange={(e) => setShowTopSelling(e.target.checked)}
-                      className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
-                    />
-                    <span className="text-sm font-medium text-gray-700 flex items-center">
-                      <Star className="h-4 w-4 mr-1 text-yellow-500" />
-                      Top Selling Only
-                    </span>
-                  </label>
-                </div>
+
               </div>
             </div>
           )}
