@@ -95,49 +95,49 @@ const Dashboard = () => {
   ]
 
   return (
-    <div className="p-4 sm:p-6 lg:p-8">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-7xl mx-auto">
+    <div className="p-3 sm:p-4 md:p-6 lg:p-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 w-full max-w-7xl mx-auto">
       {/* ---- Sidebar (My Account) ---- */}
-      <div className="col-span-1 space-y-4">
+      <div className="col-span-1 space-y-3 sm:space-y-4">
         {/* Account Status */}
-        <div className="bg-white rounded-lg shadow-sm p-4">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Account Status</h3>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <div>
-                <p className="font-medium text-gray-900">Email Verified</p>
-                <p className="text-sm text-gray-600">Your email is confirmed</p>
+        <div className="bg-white rounded-lg shadow-sm p-3 sm:p-4">
+          <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Account Status</h3>
+          <div className="space-y-3 sm:space-y-4">
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 flex-shrink-0" />
+              <div className="min-w-0">
+                <p className="font-medium text-gray-900 text-sm sm:text-base">Email Verified</p>
+                <p className="text-xs sm:text-sm text-gray-600">Your email is confirmed</p>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <div>
-                <p className="font-medium text-gray-900">Phone Verified</p>
-                <p className="text-sm text-gray-600">Your phone is confirmed</p>
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 flex-shrink-0" />
+              <div className="min-w-0">
+                <p className="font-medium text-gray-900 text-sm sm:text-base">Phone Verified</p>
+                <p className="text-xs sm:text-sm text-gray-600">Your phone is confirmed</p>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <Clock className="h-5 w-5 text-yellow-500" />
-              <div>
-                <p className="font-medium text-gray-900">Profile Completion</p>
-                <p className="text-sm text-gray-600">85% complete</p>
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-500 flex-shrink-0" />
+              <div className="min-w-0">
+                <p className="font-medium text-gray-900 text-sm sm:text-base">Profile Completion</p>
+                <p className="text-xs sm:text-sm text-gray-600">85% complete</p>
               </div>
             </div>
           </div>
         </div>
         {/* Recommended Products */}
-        <div className="bg-white rounded-lg shadow-sm p-4">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900">Recommended</h3>
-            <Link to="/shop" className="text-sm text-primary-600 hover:text-primary-700 font-medium">
+        <div className="bg-white rounded-lg shadow-sm p-3 sm:p-4">
+          <div className="flex items-center justify-between mb-3 sm:mb-4">
+            <h3 className="text-base sm:text-lg font-semibold text-gray-900">Recommended</h3>
+            <Link to="/shop" className="text-xs sm:text-sm text-primary-600 hover:text-primary-700 font-medium">
               View All
             </Link>
           </div>
-          <div className="grid grid-cols-1 gap-4">
+          <div className="grid grid-cols-1 gap-3 sm:gap-4">
             {recommendedProducts.map((product) => (
-              <Link key={product.id} to={`/product/${product.id}`} className="border border-gray-200 rounded-lg p-4 hover:shadow-sm transition-shadow group">
-                <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg mb-3 overflow-hidden relative">
+              <Link key={product.id} to={`/product/${product.id}`} className="border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-sm transition-shadow group">
+                <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg mb-2 sm:mb-3 overflow-hidden relative">
                   <img
                     src={product.image}
                     alt={product.name}
@@ -156,12 +156,12 @@ const Dashboard = () => {
                     <span className="text-center px-2">{product.name}</span>
                   </div>
                 </div>
-                <h4 className="font-medium text-gray-900 mb-1">{product.name}</h4>
+                <h4 className="font-medium text-gray-900 mb-1 text-sm sm:text-base line-clamp-2">{product.name}</h4>
                 <div className="flex items-center justify-between">
-                  <span className="text-primary-600 font-semibold">₹{product.price}</span>
+                  <span className="text-primary-600 font-semibold text-sm sm:text-base">₹{product.price}</span>
                   <div className="flex items-center">
-                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                    <span className="text-sm text-gray-600 ml-1">{product.rating}</span>
+                    <Star className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-400 fill-current" />
+                    <span className="text-xs sm:text-sm text-gray-600 ml-1">{product.rating}</span>
                   </div>
                 </div>
               </Link>
@@ -170,12 +170,12 @@ const Dashboard = () => {
         </div>
       </div>
       {/* ---- Dashboard Content ---- */}
-      <main className="col-span-1 lg:col-span-2 space-y-4 w-full">
+      <main className="col-span-1 lg:col-span-2 space-y-3 sm:space-y-4 w-full">
         {/* Welcome Section */}
-        <div className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl shadow-lg p-6 text-white">
+        <div className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl shadow-lg p-4 sm:p-6 text-white">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-3">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 md:mb-3">
                 Welcome back, {user ? user.firstName : 'User'}!
               </h2>
               <p className="text-primary-100 text-base md:text-lg">

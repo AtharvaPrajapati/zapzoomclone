@@ -152,33 +152,17 @@ const ProductCard = ({
           </div>
         )}
 
-        {/* Mobile Action Buttons - Always Visible */}
-        {isMobile && (
-          <div className="absolute bottom-2 left-2 right-2 flex gap-2">
-            <button
-              onClick={handleAddToCart}
-              className="flex-1 bg-gray-600 text-white py-2 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-300 flex items-center justify-center gap-1 text-xs"
-            >
-              <ShoppingCart className="h-3 w-3" />
-              Add
-            </button>
-          </div>
-        )}
-
-        {/* Desktop Action Buttons - Hover to Show */}
-        {!isMobile && (
-          <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 right-2 sm:right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex gap-2">
-            <button
-              onClick={handleAddToCart}
-              className="flex-1 bg-gray-600 text-white py-1.5 sm:py-2 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-300 flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm"
-            >
-              <ShoppingCart className="h-3 w-3 sm:h-4 sm:w-4" />
-              <span className="hidden sm:inline">Add to Cart</span>
-              <span className="sm:hidden">Add</span>
-            </button>
-            
-          </div>
-        )}
+        {/* Action Buttons - Responsive */}
+        <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 right-2 sm:right-3 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex gap-2">
+          <button
+            onClick={handleAddToCart}
+            className="flex-1 bg-primary-500 text-white py-2 sm:py-2.5 rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm shadow-lg"
+          >
+            <ShoppingCart className="h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="hidden xs:inline sm:hidden lg:inline">Add to Cart</span>
+            <span className="xs:hidden sm:inline lg:hidden">Add</span>
+          </button>
+        </div>
       </div>
 
       {/* Product Info */}

@@ -389,8 +389,8 @@ const ProductDetail = ({ addToCart, toggleWishlist, isWishlisted }) => {
     <div className="min-h-screen bg-gray-50">
       {/* Breadcrumb */}
       <div className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center space-x-2 text-sm">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4">
+          <div className="flex items-center space-x-2 text-xs sm:text-sm">
             <Link to="/" className="text-gray-500 hover:text-gray-700">Home</Link>
             <span className="text-gray-400">/</span>
             <Link to="/shop" className="text-gray-500 hover:text-gray-700">Shop</Link>
@@ -400,21 +400,21 @@ const ProductDetail = ({ addToCart, toggleWishlist, isWishlisted }) => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
         {/* Back Button */}
         <button
           onClick={() => navigate(-1)}
-          className="flex items-center text-gray-600 hover:text-gray-900 mb-6 transition-colors"
+          className="flex items-center text-gray-600 hover:text-gray-900 mb-4 sm:mb-6 transition-colors touch-manipulation"
         >
-          <ArrowLeft className="h-5 w-5 mr-2" />
-          Back
+          <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+          <span className="text-sm sm:text-base">Back</span>
         </button>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           {/* Product Images */}
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {/* Main Image */}
-            <div className="aspect-square bg-gray-100 rounded-2xl overflow-hidden relative">
+            <div className="aspect-square bg-gray-100 rounded-xl sm:rounded-2xl overflow-hidden relative">
               <img
                 src={product.images[activeImageIndex]}
                 alt={product.name}
@@ -435,12 +435,12 @@ const ProductDetail = ({ addToCart, toggleWishlist, isWishlisted }) => {
             </div>
 
             {/* Thumbnail Images */}
-            <div className="flex space-x-2 overflow-x-auto">
+            <div className="flex space-x-2 sm:space-x-3 overflow-x-auto pb-2">
               {product.images.map((image, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveImageIndex(index)}
-                  className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
+                  className={`flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden border-2 transition-colors touch-manipulation ${
                     activeImageIndex === index ? 'border-primary-500' : 'border-gray-200'
                   }`}
                 >

@@ -2,14 +2,13 @@ import { useState } from 'react'
 import { Heart, ShoppingCart, Eye, Star } from 'lucide-react'
 import QuickView from './QuickView'
 import ProductCard from './ProductCard'
-import { useResponsive } from '../hooks/useResponsive'
 
 const ProductGrid = ({ addToCart }) => {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [wishlist, setWishlist] = useState([])
   const [quickViewProduct, setQuickViewProduct] = useState(null)
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false)
-  const { isMobile, isTablet } = useResponsive()
+  // Responsive grid handled by CSS classes
 
   const categories = [
     { id: 'all', name: 'All Products' },
@@ -173,13 +172,7 @@ const ProductGrid = ({ addToCart }) => {
         </div>
 
         {/* Products Grid */}
-        <div className={`grid gap-3 sm:gap-4 lg:gap-6 ${
-          isMobile
-            ? 'grid-cols-2'
-            : isTablet
-            ? 'grid-cols-3'
-            : 'grid-cols-4'
-        }`}>
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6">
           {filteredProducts.map((product) => (
             <ProductCard
               key={product.id}
