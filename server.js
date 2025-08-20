@@ -30,13 +30,14 @@ app.post('/create-order', async (req, res) => {
   const { amount, currency, receipt, notes } = req.body;
   try {
     const options = {
+      key: 'rzp_test_R7H4c0ZpjgDeo0', // Must match backend key_id
       amount: amount || 100, // amount in paise
       currency: currency || 'INR',
       receipt: receipt || `receipt_${Date.now()}`,
       notes: notes || { type: 'payment' },
     };
     const order = await razorpay.orders.create(options);
-    res.json({ order_id: order.id, amount: order.amount, currency: order.currency });
+    res.json(order); // Return full order object
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
